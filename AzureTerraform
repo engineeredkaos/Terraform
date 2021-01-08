@@ -1,0 +1,42 @@
+Azure Shell
+
+az login
+
+//Create a service principal
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscription_id>"
+
+{
+  "appId": "---",
+  "displayName": "azure-cli----",
+  "name": "http://azure-cli----",
+  "password": "---",
+  "tenant": "---"
+}
+
+//Login with Service principal
+az login --service-principal -u <service_principal_name> -p "<service_principal_password>" --tenant "<service_principal_tenant>"
+
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "--",
+    "id": "--",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Azure for Students",
+    "state": "Enabled",
+    "tenantId": "--",
+    "user": {
+      "name": "--",
+      "type": "servicePrincipal"
+    }
+  }
+]
+
+// Set the current subscription
+
+az account show
+
+az account list --query "[].{name:name, subscriptionId:id}"
+
+az account set --subscription="<subscription_id>"
