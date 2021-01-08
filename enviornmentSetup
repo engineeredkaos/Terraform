@@ -1,0 +1,10 @@
+Terraform - env var
+VisulaStudioCode
+Node.js - env var
+GraphViz - env var
+
+VisualStudioCode - Terraform and Azure Extensions
+
+PowerShell - Microsoft Web Platform Installer
+-> Add-AzAccount - vault keys for id and tenant
+-> Get-AzureSubscription - valut keys for id and tenant
